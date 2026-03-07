@@ -12,8 +12,6 @@ asset/temp/
 assets/temp/
 
 data/*
-!data/defaults/
-!data/defaults/*
 
 baileys_store.json
 message_backup.json
