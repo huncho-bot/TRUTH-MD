@@ -43,7 +43,6 @@
     "node-id3": "^0.2.3",
     "node-webpmux": "^3.1.0",
     "node-youtube-music": "^0.8.3",
-    "noop2": "^2.0.0",
     "performance-now": "^2.1.0",
     "phin": "^3.7.1",
     "pino": "^8.21.0",
@@ -63,10 +62,6 @@
     "youtubedl-core": "^4.11.7",
     "yt-search": "^2.12.1",
     "ytdl-core": "^4.11.5"
-  },
-  "overrides": {
-    "sharp": "npm:noop2@2.0.0",
-    "libsignal": "npm:noop2@2.0.0"
   },
   "engines": {
     "node": "18.x"
