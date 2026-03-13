@@ -24,6 +24,9 @@ RUN npm uninstall sharp --legacy-peer-deps && \
 
 COPY . .
 
+# Step 5: Apply patches
+RUN node scripts/patch-baileys.cjs
+
 EXPOSE 3000 5000
 
 ENV NODE_ENV=production
