@@ -23,7 +23,7 @@
 ### FORK REPOSITORY
 
 <a href="https://truthsite.courtneytech.xyz/">
-  <img src="https://img.shields.io/badge/CLICK%20HERE-DC143C?style=for-the-badge&logo=heroku&logoColor=white" height="65"/>
+  <img src="https://img.shields.io/badge/CLICK%20HERE-DC143C?style=for-the-badge&logo=heroku&logoColor=white" height="120"/>
 </a>
 
 ### SESSION ID & DEPLOYMENTS
