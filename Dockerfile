@@ -1,4 +1,4 @@
-FROM node:20
+FROM node:20.20.1
 
 RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg imagemagick webp git python3 make g++ procps && apt-get clean && rm -rf /var/lib/apt/lists/*
 
