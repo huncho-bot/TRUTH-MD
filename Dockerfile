@@ -1,18 +1,22 @@
-FROM node:20
+FROM node:20-slim
 
-  RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg imagemagick webp git python3 make g++ procps && apt-get clean && rm -rf /var/lib/apt/lists/*
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    ffmpeg \
+    chromium \
+    imagemagick \
+    graphicsmagick \
+    webp \
+    && rm -rf /var/lib/apt/lists/*
 
-  WORKDIR /app
+WORKDIR /app
 
-  COPY package*.json ./
+# Copy package files and install dependencies
+COPY package*.json ./
+RUN npm install --production --legacy-peer-deps
 
-  RUN npm install --legacy-peer-deps --ignore-scripts
-  RUN node scripts/patch-baileys.cjs || true
-  RUN rm -rf node_modules/sharp && npm install --platform=linux --arch=x64 sharp@0.32.6 --legacy-peer-deps
+# Copy the rest of the application
+COPY . .
 
-  COPY . .
-
-  EXPOSE 3000 5000
-  ENV NODE_ENV=production
-  CMD ["node", "index.js"]
-  
+# Start the bot
+CMD ["node", "index.js"]
